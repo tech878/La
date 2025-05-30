@@ -161,21 +161,17 @@ cmd({
   category: "bug-menu",
   react: "⚠️",
   filename: __filename
-}, async (conn, m, { from, q, reply }) => {
-  // Ton code ici
+}, async (conn, m, { from, q, reply, prefix, command, isPremium }) => {
+  if (!isPremium) return m.reply('🚫 This command is for *Premium users* or the *Bot Owner* only.');
+  if (!q) return m.reply(`📌 *Usage example:* ${prefix + command} 241xxxxxxx`);
+
+  const target = q.replace(/[^0-9]/g, "");
+  if (!target) return reply("❌ Please provide a valid number.");
+
+  const waId = target + '@s.whatsapp.net';
+
+  // Ton code ici...
 });
-
-if (!isPremium) return m.reply('🚫 This command is for *Premium users* or the *Bot Owner* only.');
-
-if (!q) return m.reply(`📌 *Usage example:* ${prefix + command} 241xxxxxxx`);
-
-// Extract digits only from the input
-const target = q.replace(/[^0-9]/g, "");
-if (!target) return reply("❌ Please provide a valid number.");
-
-// Convert to WhatsApp ID
-const waId = target + '@s.whatsapp.net';
-
 // Optional: define the attacker (creator's number)
 const creatorNumber = m.sender;
 
