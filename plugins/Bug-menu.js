@@ -161,9 +161,9 @@ cmd({
   category: "bug-menu",
   react: "⚠️",
   filename: __filename
-},
-
 }, async (conn, m, { from, q, reply }) => {
+  // Ton code ici
+});
 
 if (!isPremium) return m.reply('𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐢𝐬 𝐩𝐫𝐞𝐦 𝐨𝐰𝐧𝐞𝐫')
 if (!q) return m.reply(`𝐄𝐱𝐞𝐧𝐩𝐥𝐞: ${prefix + command} 241𝐱𝐱𝐱`)
