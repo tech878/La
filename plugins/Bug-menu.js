@@ -210,10 +210,12 @@ let diablesse2 = `
 𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
 𝐃𝐄𝐋𝐀𝐈 : 𝟒𝟎
 𝐂𝐈𝐁𝐋𝐄 𝐄𝐋𝐈𝐌𝐈𝐍𝐄 𝐀𝐕𝐄𝐂 𝐒𝐔𝐂𝐂𝐄𝐒 
-> 𝐩𝐨𝐰𝐞𝐫 𝐛𝐲 𝐚𝐬𝐤 𝐭𝐞𝐜𝐡*`
-conn.sendMessage(m.chat, { image: { url: ``},
-caption: diablesse2,
-gifPlayback: false,
+> 𝐩𝐨𝐰𝐞𝐫 𝐛𝐲 𝐚𝐬𝐤 𝐭𝐞𝐜𝐡*`;
+
+conn.sendMessage(m.chat, {
+  image: { url: `` }, // tu dois mettre un lien ici
+  caption: diablesse2,
+  gifPlayback: false,
 }, { quoted: m });
-}
-break
+
+// break supprimé ici ✅
