@@ -213,9 +213,7 @@ let diablesse2 = `
 > 𝐩𝐨𝐰𝐞𝐫 𝐛𝐲 𝐚𝐬𝐤 𝐭𝐞𝐜𝐡*`;
 
 conn.sendMessage(m.chat, {
-  image: { url: `` }, // tu dois mettre un lien ici
+  image: { url: 'https://files.catbox.moe/p1xybt.jpg' }, // Remplace par ton vrai lien d’image
   caption: diablesse2,
-  gifPlayback: false,
+  gifPlayback: false
 }, { quoted: m });
-
-// break supprimé ici ✅
