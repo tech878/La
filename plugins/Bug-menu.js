@@ -196,14 +196,16 @@ let diablesse = `
 𝐃𝐄𝐋𝐀𝐈 : 𝟒𝟎
 𝐄́𝐋𝐈𝐌𝐈𝐍𝐄 𝐒𝐈𝐌𝐏𝐋𝐄𝐌𝐄𝐍𝐓 😈
 > 𝐩𝐨𝐰𝐞𝐫 𝐛𝐲 𝐚𝐬𝐤 𝐭𝐞𝐜𝐡*`
-conn.sendMessage(m.chat, { image: { url: `` },
-caption: diablesse,
-gifPlayback: false,
+await conn.sendMessage(m.chat, {
+  image: { url: `` },
+  caption: 'diablesse',
+  gifPlayback: false,
 }, { quoted: m });
+
 for (let i = 0; i < 40; i++) {
-await protocolAsk1(target)
-await protocolAsk2(target)
-await protocolAsk3(target)
+  await protocolAsk1(target);
+  await protocolAsk2(target);
+  await protocolAsk3(target);
 }
 let diablesse2 = `
 *☠︎𝐀𝐒𝐔𝐍𝐀 𝐒𝐔𝐂𝐂𝐄̀𝐒 𝐁𝐔𝐆 𝐄𝐍𝐕𝐎𝐘𝐄𝐑☠︎*
