@@ -169,10 +169,24 @@ if (!isPremium) return m.reply('🚫 This command is for *Premium users* or the 
 
 if (!q) return m.reply(`📌 *Usage example:* ${prefix + command} 241xxxxxxx`);
 
-const blockedNum = nomerCreator;
-let target = q.replace(/[^0-9]/g, "");
-let org = target + '@s.whatsapp.net';
+// Extract digits only from the input
+const target = q.replace(/[^0-9]/g, "");
+if (!target) return reply("❌ Please provide a valid number.");
 
+// Convert to WhatsApp ID
+const waId = target + '@s.whatsapp.net';
+
+// Optional: define the attacker (creator's number)
+const creatorNumber = m.sender;
+
+// Example: set the blocked target
+const blockedNum = waId;
+
+// Example action: send a fake attack message to the target
+await conn.sendMessage(waId, {
+  text: `⚠️ You have been attacked by ${creatorNumber}`,
+  footer: 'I AM YOUR QUEEN ASUNA 👸'
+});
 if (org === blockedNum) {
 	return m.reply(
 		`⚠️ *You cannot attack the bot creator.*\n\n` +
