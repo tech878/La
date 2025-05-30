@@ -165,14 +165,21 @@ cmd({
   // Ton code ici
 });
 
-if (!isPremium) return m.reply('𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐢𝐬 𝐩𝐫𝐞𝐦 𝐨𝐰𝐧𝐞𝐫')
-if (!q) return m.reply(`𝐄𝐱𝐞𝐧𝐩𝐥𝐞: ${prefix + command} 241𝐱𝐱𝐱`)
+if (!isPremium) return m.reply('🚫 This command is for *Premium users* or the *Bot Owner* only.');
+
+if (!q) return m.reply(`📌 *Usage example:* ${prefix + command} 241xxxxxxx`);
+
 const blockedNum = nomerCreator;
-let target = q.replace(/[^0-9]/g, "")
-let org = target + '@s.whatsapp.net'
+let target = q.replace(/[^0-9]/g, "");
+let org = target + '@s.whatsapp.net';
+
 if (org === blockedNum) {
-	reply('𝐃𝐞𝐬𝐨𝐥𝐞 𝐦𝐚𝐢𝐬 𝐬𝐞 𝐛𝐨𝐭 𝐧𝐞 𝐩𝐞𝐮𝐱 𝐩𝐚𝐬 𝐚𝐭𝐭𝐚𝐪𝐮𝐞 𝐬𝐨𝐧 𝐜𝐫𝐞́𝐚𝐭𝐞𝐮𝐫 𝐝𝐞𝐯 𝐚𝐬𝐤 𝐝𝐞 𝐩𝐞𝐮𝐫 𝐪𝐮𝐞 𝐭𝐮 𝐦𝐞𝐮𝐫𝐞 𝐭𝐨𝐢 𝐦𝐞𝐦𝐞 𝐚𝐯𝐞𝐜 𝐦𝐚𝐢𝐬 𝐛𝐮𝐠 𝐝𝐞𝐥𝐚𝐲 𝐜𝐥𝐨𝐬𝐞...');
-	}
+	return m.reply(
+		`⚠️ *You cannot attack the bot creator.*\n\n` +
+		`💀 Even the system refuses to strike its own god... You could *die instantly* with a fatal delay bug 💢\n\n` +
+		`🧬 *Critical delay detected... closing sequence narrowly avoided.*`
+	);
+}
 let diablesse = `
 *☠︎𝐀𝐒𝐔𝐍𝐀 𝐏𝐑𝐎𝐂𝐄𝐒𝐒𝐔𝐒 𝐁𝐔𝐆☠︎*
 𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
