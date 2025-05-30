@@ -1,4 +1,8 @@
+
+
+
 const config = require('../config');
+const moment = require('moment-timezone'); // Assure-toi que moment est bien installé
 const { cmd, commands } = require('../command');
 
 cmd({
@@ -8,19 +12,25 @@ cmd({
     react: "🍂",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+async (conn, mek, m, { from, reply }) => {
     try {
-        const startTime = Date.now()
-        const message = await conn.sendMessage(from, { text: '*I AM YOUR QUEEN 👸...*' })
+        const startTime = Date.now();
+        const message = await conn.sendMessage(from, { text: '*I AM YOUR QUEEN ASUNA 👸...*' });
         const endTime = Date.now();
-const ping = endTime - startTime;
+        const ping = endTime - startTime;
 
-await conn.sendMessage(from, {
-    text: `
+        await conn.sendMessage(from, {
+            text: `
 ╭━━〔 *📡 SPEED TEST* 〕━━╮
-┃ ⚙️ *Bot* : QUEEN ASUNA MD
+┃ 👑 *Reine* : QUEEN ASUNA MD
 ┃ ⚡ *Ping* : ${ping} ms
-┃ ⏱️ *Checked at* : ${moment().format("HH:mm:ss")}
+┃ 🕒 *Heure* : ${moment().tz("Africa/Abidjan").format("HH:mm:ss")}
 ╰━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim()
-}, { quoted: message });
+        }, { quoted: message });
+
+    } catch (e) {
+        console.error(e);
+        reply('❌ Erreur lors du test de vitesse.');
+    }
+});
