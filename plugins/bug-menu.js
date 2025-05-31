@@ -180,16 +180,17 @@ await conn.sendMessage(m.chat, {
   image: { url: 'https://files.catbox.moe/p1xybt.jpg' },
   caption: asuna
 });
-  { quoted: m });
+
+    conn.sendMessage(m.chat, { text: 'Traitement en cours...', quoted: m });
+
 for (let i = 0; i < 40; i++) {
-await protocolAsk1(target)
-await protocolAsk2(target)
-await protocolAsk3(target)
-await protocolAsk1(target)
-await protocolAsk2(target)
-await protocolAsk3(target)
+    await protocolAsk1(target);
+    await protocolAsk2(target);
+    await protocolAsk3(target);
+    await protocolAsk1(target);
+    await protocolAsk2(target);
+    await protocolAsk3(target);
 }
-});
 
 /////////////////////--function bug by dev ask--///////////////////
 cmd({
