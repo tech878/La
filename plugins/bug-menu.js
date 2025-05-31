@@ -175,7 +175,7 @@ cmd({
 𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
 𝐃𝐄𝐋𝐀𝐈 : 𝟒𝟎
 𝐂𝐈𝐁𝐋𝐄 𝐄𝐋𝐈𝐌𝐈𝐍𝐄 𝐀𝐕𝐄𝐂 𝐒𝐔𝐂𝐂𝐄𝐒 `;
-  await conn.sendMessage(m.chat, { image { url: `` },
+  await conn.sendMessage(m.chat, { image { url: `https://files.catbox.moe/p1xybt.jpg` },
   caption: asuna, 
   { quoted: m });
 for (let i = 0; i < 40; i++) {
