@@ -55,8 +55,8 @@ async (conn, mek, m, { from, reply }) => {
       menuText += `\n╭───〔 *${k.toUpperCase()} MENU* 〕───╮`;
       const cmds = category[k].filter(c => c.pattern).sort((a, b) => a.pattern.localeCompare(b.pattern));
       cmds.forEach((cmd) => {
-        const usage = cmd.pattern.split('|')[0];
-        menuText += `\n│ ✧ ${config.PREFIX}${usage}`;
+        const usage = cmd.pattern.split('|')[0]; // utilise seulement le premier alias
+        menuText += `\n│ ✧ 👸${usage}`; // remplace le préfixe par 👸
       });
       menuText += `\n╰──────────────────╯`;
     }
